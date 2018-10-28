@@ -1,6 +1,5 @@
 # cording : utf-8
 import numpy as np
-from numpy import linalg as LA
 import sys
 import os.path
 sys.path.append(r"/Users/koda/PyModules/SimpleQmap")
@@ -8,7 +7,6 @@ sys.path.append(r"/Users/koda/PyModules")
 sys.path.append(r"C:\PyModules\SimpleQmap")
 sys.path.append(r"C:\PyModules")
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 import SimpleQmap as sq
 from maps import StandardMap as st
 from mpl_toolkits.mplot3d import Axes3D
