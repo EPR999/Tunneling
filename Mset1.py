@@ -330,7 +330,7 @@ def Release(event):#Get x1,y1(initialoriginx,initialoriginy)
 #
 #        return
 ########################################################
-def initialdisksize(alpha,beta,originx,originy,radius,diskgrid,cmap,switch): #this method is used to one of the directions of the two.
+def initialdisksize(alpha,beta,originx,originy,radius,diskgrid,cmap,switch): #this method get one of the directions of the two."Switch" determine it.
         global orbit
         initp = 0
         count = 0
