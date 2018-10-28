@@ -442,7 +442,6 @@ def disksize(alpha,beta,originx,originy,radius,diskgrid,cmap,switch): #this meth
             ppointx = pointx
             ppointy = pointy
             if (count >= 2 and alpha != 0 and beta != twopi ) or ( alpha == 0 and beta == twopi and count >= 3) and originy > 0.1 ** 3:
-                print('小さくしておく')
                 radius =radius/2
                 count = 0
                 i = 0
@@ -454,7 +453,6 @@ def disksize(alpha,beta,originx,originy,radius,diskgrid,cmap,switch): #this meth
            #      count = 0
             if arg >= endarg:
                 if count == 0 :
-                 print('別の場所でお願いします')
                  break
         plt.plot(disk[0],disk[1],',k')
         return originseed
@@ -707,7 +705,7 @@ p=initp
 #draw(p,cmap) #Mset描きたい時は使ってください.その時は下のloadtxtはoff
 #v(p,cmap)
 
-seed = np.loadtxt('Msetimp0.txt')
+seed = np.loadtxt('Msetimp0.txt')#ここに読み込みたいMsetのファイルを持ってくる。
 fig = plt.figure(figsize = (6,6))
 ax = fig.add_subplot(1,1,1)
 ax.plot(seed[0],seed[1],',k')
