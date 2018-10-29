@@ -18,7 +18,6 @@ import pandas as pd
 Seeds = [[],[],[]]
 psi = [[],[],[]]#[orbitnumber,value,p]
 density = [[],[]]#[value,p]
- #これ任意のステップでなんとかなるように.実際に出力したマップとの整合性に気をつけて.
 twopi = 2.0*np.pi
 grid=500
 regrid = 500
@@ -110,9 +109,6 @@ for i in range(len(Seeds[0])):
     psi = WaveFunction(S,p)
     density[0].extend([probdensity(S,p,cmap)[0]])
     density[1].extend([(probdensity(S,p,cmap)[1]).real/twopi])
-#print(density)
-#print(density)#print(density)
-#plt.yscale("log")
 print(density[0])
 plt.plot(density[1],density[0],',k')
 plt.xlim(-2,2)
