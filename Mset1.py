@@ -2,10 +2,7 @@
 import numpy as np
 import sys
 import os.path
-sys.path.append(r"/Users/koda/PyModules/SimpleQmap")
-sys.path.append(r"/Users/koda/PyModules")
-sys.path.append(r"C:\PyModules\SimpleQmap")
-sys.path.append(r"C:\PyModules")
+
 import matplotlib.pyplot as plt
 import SimpleQmap as sq
 from maps import StandardMap as st
@@ -56,9 +53,9 @@ orbitnumber = 17
 #今のところステップ数に応じて変更しなければなりませんが、
 #ヘッダーでステップ数を読み込ませる機能を後ですぐに実装します。
 #################
-class ModifiedKMap(st):
+class ModifiedKMap:
     def __init__(self, k,d):
-        st.__init__(self,k)
+        self.k = k
         self.d = d
     def func0(self,x,k):
         return k*np.sin(x)
