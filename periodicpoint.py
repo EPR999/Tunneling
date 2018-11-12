@@ -46,9 +46,10 @@ step = 1
 L = 1
 N = 10 ** 6
 dimension = 2
-k = 1.4
-xb = 1.3
-e2 = 1.1
+k = 20
+xf = 1.2
+xb = 1.0
+e2 = k * xf * (np.exp(-8 * xb * (2 * xf - xb)) / (1 - np.exp(-32 * xf * xb)))
 
 def main():
     seeds = 1000
