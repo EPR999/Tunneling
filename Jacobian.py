@@ -2,9 +2,10 @@ import numpy as np
 
 #線形化を行うために写像についてヤコビアンを求める.
 #This program evaluate Jacobian of the map at fixed and periodic orbits in order to do linearlization around that point.
-xb = 1
-k = 1.2
-e2 = 1
+k = 20
+xf = 1.2
+xb = 1.0
+e2 = k * xf * (np.exp(-8 * xb * (2 * xf - xb)) / (1 - np.exp(-32 * xf * xb)))
 dimension = 2
 
 def dotV(x):  #kicked potential の時間微分
