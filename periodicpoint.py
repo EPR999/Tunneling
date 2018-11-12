@@ -25,8 +25,8 @@ def periodicpoint(q0,p0,step):
     d = distance(q,p,q0,p0)
     a = np.array([])
     a = [ [q0[i],p0[i]] for i in range(len(q))  if d[i] < 10 ** (-5) ]
-    periodic_q0 = a[0]
-    periodic_p0 = a[1]
+    periodic_q0 = [a[i][0] for i in range(len(a))]
+    periodic_p0 = [a[i][1] for i in range(len(a))]
     print(len(a))
     return periodic_q0,periodic_p0   
     
