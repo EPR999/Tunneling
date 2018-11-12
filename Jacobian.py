@@ -31,7 +31,6 @@ def main():
        jacobian =  [np.append(jacobian[j],derivative(U,x,i)[j]) for j in range(dimension)]
        print(jacobian)
     print(jacobian)#ヤコビアンが求まる.次は固有値を
-    print("elapsed_time:{0}".format(elapsed_time)+"[sec]")
     w,v = np.linalg.eig(jacobian)#wは固有値,vは固有ベクトル.
     print(v)
     
