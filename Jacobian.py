@@ -26,7 +26,7 @@ def derivative(func,x,i):#多変数関数の微分(i番目が微分され戻る.
     return (np.array(func(xp))-np.array(func(xm)))/(2 * h)
 
 def main():
-    x = np.array([0.0,0.0]) #x = [Re(q),Re(p)] 不動点・周期点を受け取る.#This get
+    x = np.array([0.0,0.0]) #x = [Re(q),Re(p)] 不動点・周期点を受け取る.
     jacobian = [np.array([]),np.array([])]
     for i in range(dimension):#theta is one of the misterious
        jacobian =  [np.append(jacobian[j],derivative(U,x,i)[j]) for j in range(dimension)]
