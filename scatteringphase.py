@@ -14,9 +14,10 @@ class ScatteringMap: #made by R.Kogawa
 def dotV(x):  #kicked potential の時間微分
         return k * x * np.exp(-8 * x**2) - e2 * (np.exp(-8 * pow(x - xb, 2)) - np.exp(-8 * pow(x + xb, 2)))
 
-xb = 1.3
-k = 1.1
-e2 = 1.3
+k = 20
+xf = 1.2
+xb = 1.0
+e2 = k * xf * (np.exp(-8 * xb * (2 * xf - xb)) / (1 - np.exp(-32 * xf * xb)))
 twopi = 2 * np.pi
 step  = 6
 seed = 1000
