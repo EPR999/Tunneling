@@ -1,10 +1,6 @@
 # -*- coding:utf-8 -*-
 import numpy as np
 import sys
-sys.path.append(r"/Users/koda/PyModules/SimpleQmap")
-sys.path.append(r"/Users/koda/PyModules")
-sys.path.append(r"C:\PyModules\SimpleQmap")
-sys.path.append(r"C:\PyModules")
 import matplotlib.pyplot as plt
 import SimpleQmap as sq
 from maps import StandardMap as st
